@@ -7,7 +7,9 @@
     "start": "gulp",
     "serve": "gulp serve",
     "watch": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp build",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -26,5 +28,9 @@
     "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
   }
 }
